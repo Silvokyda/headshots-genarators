@@ -9,8 +9,11 @@ export async function GET(req: NextRequest) {
   const code = requestUrl.searchParams.get("code");
   const error = requestUrl.searchParams.get("error");
   const next = requestUrl.searchParams.get("next") || "/";
-  console.log("next", next);
   const error_description = requestUrl.searchParams.get("error_description");
+  console.log("code", code);
+  console.log("error", error);
+  console.log("next", next);
+  console.log("error_description", error_description);
 
   if (error) {
     console.log("error: ", {
