@@ -6,10 +6,10 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(req: NextRequest) {
   const requestUrl = new URL(req.url);
-  console.log("requestUrl", requestUrl);
   const code = requestUrl.searchParams.get("code");
   const error = requestUrl.searchParams.get("error");
   const next = requestUrl.searchParams.get("next") || "/";
+  console.log("next", next);
   const error_description = requestUrl.searchParams.get("error_description");
 
   if (error) {
